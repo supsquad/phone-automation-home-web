@@ -1,0 +1,11 @@
+services:
+
+  web:
+    image: ${APP_IMAGE}
+    env_file:
+      - .env.${MODE}
+    restart: always
+    ports:
+      - "${APP_PORT}:80"
+    profiles:
+      - web

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -a
+. ./.env.$1
+set +a
+
+docker build -t ${APP_IMAGE} -f Dockerfile .
